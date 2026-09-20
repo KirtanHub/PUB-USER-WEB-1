@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<meta name="description"
+    content="PUB USER WEBSITE - One place for important Indian government and citizen services.">
+
+<title>PUB USER WEBSITE | Indian Citizen Services</title>
+
+<style>
+    /* =========================
+       BASIC RESET
+    ========================== */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4f7fb;
+        color: #172033;
+        transition: 0.3s;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+        background: linear-gradient(135deg, #ff9933, #ffffff, #138808);
+        padding: 35px 20px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    header h1 {
+        font-size: 42px;
+        letter-spacing: 2px;
+        color: #111827;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        color: #333;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+
+    /* =========================
+       THEME BUTTON
+    ========================== */
+
+    #themeButton {
+        border: none;
+        padding: 12px 22px;
+        border-radius: 30px;
+        cursor: pointer;
+        background: #111827;
+        color: white;
+        font-size: 15px;
+        transition: 0.3s;
+    }
+
+    #themeButton:hover {
+        transform: scale(1.05);
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: #111827;
+        padding: 14px;
+        text-align: center;
+    }
+
+    nav a {
+        color: white;
+        margin: 0 12px;
+        font-size: 14px;
+        transition: 0.2s;
+    }
+
+    nav a:hover {
+        color: #ff9933;
+    }
+
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+        max-width: 1100px;
+        margin: 35px auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        color: #667085;
+    }
+
+
+    /* =========================
+       SEARCH
+    ========================== */
+
+    .search-box {
+        max-width: 700px;
+        margin: 25px auto;
+        display: flex;
+    }
+
+    .search-box input {
+        width: 100%;
+        padding: 16px;
+        border: 1px solid #d0d5dd;
+        border-radius: 12px 0 0 12px;
+        outline: none;
+        font-size: 16px;
+    }
+
+    .search-box button {
+        border: none;
+        padding: 0 25px;
+        background: #138808;
+        color: white;
+        border-radius: 0 12px 12px 0;
+        cursor: pointer;
+    }
+
+
+    /* =========================
+       CATEGORY BUTTONS
+    ========================== */
+
+    .categories {
+        text-align: center;
+        margin: 20px auto 35px;
+    }
+
+    .category-btn {
+        border: none;
+        padding: 10px 18px;
+        margin: 5px;
+        border-radius: 20px;
+        background: #e8edf5;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .category-btn:hover,
+    .category-btn.active {
+        background: #138808;
+        color: white;
+    }
+
+
+    /* =========================
+       SERVICES
+    ========================== */
+
+    .services {
+        max-width: 1150px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .services h2 {
+        margin-bottom: 20px;
+    }
+
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .service-card {
+        background: white;
+        border-radius: 18px;
+        padding: 25px;
+        border: 1px solid #e4e7ec;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+        transition: 0.3s;
+    }
+
+    .service-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .service-icon {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+        margin-bottom: 8px;
+    }
+
+    .service-card p {
+        color: #667085;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    .official {
+        display: inline-block;
+        font-size: 12px;
+        background: #e9f8ed;
+        color: #138808;
+        padding: 5px 9px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .visit-btn {
+        display: inline-block;
+        background: #172033;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+
+    .visit-btn:hover {
+        background: #138808;
+    }
+
+
+    /* =========================
+       UPDATES
+    ========================== */
+
+    .updates {
+        max-width: 1150px;
+        margin: 50px auto;
+        padding: 20px;
+    }
+
+    .update-box {
+        background: white;
+        padding: 22px;
+        border-radius: 15px;
+        margin: 12px 0;
+        border-left: 5px solid #ff9933;
+    }
+
+    .update-box a {
+        font-weight: bold;
+    }
+
+
+    /* =========================
+       EMERGENCY
+    ========================== */
+
+    .emergency {
+        max-width: 1150px;
+        margin: 50px auto;
+        padding: 30px 20px;
+        background: #fff3f3;
+        border-radius: 20px;
+    }
+
+    .emergency h2 {
+        color: #c62828;
+        margin-bottom: 15px;
+    }
+
+    .emergency-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 12px;
+    }
+
+    .emergency-card {
+        background: white;
+        padding: 15px;
+        border-radius: 12px;
+        text-align: center;
+        border: 1px solid #ffd0d0;
+    }
+
+    .emergency-card strong {
+        display: block;
+        font-size: 22px;
+        color: #c62828;
+        margin-top: 5px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+        background: #111827;
+        color: white;
+        text-align: center;
+        padding: 35px 20px;
+        margin-top: 50px;
+    }
+
+    footer p {
+        margin: 8px;
+        color: #cbd5e1;
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       BACK TO TOP
+    ========================== */
+
+    #topButton {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 45px;
+        height: 45px;
+        border: none;
+        border-radius: 50%;
+        background: #138808;
+        color: white;
+        cursor: pointer;
+        font-size: 20px;
+        display: none;
+    }
+
+
+    /* =========================
+       DARK MODE
+    ========================== */
+
+    body.dark {
+        background: #0b1120;
+        color: #f8fafc;
+    }
+
+    body.dark nav {
+        background: #020617;
+    }
+
+    body.dark .hero p,
+    body.dark .service-card p {
+        color: #aeb8c7;
+    }
+
+    body.dark .service-card,
+    body.dark .update-box,
+    body.dark .emergency-card {
+        background: #111827;
+        border-color: #263244;
+        color: white;
+    }
+
+    body.dark .category-btn {
+        background: #1e293b;
+        color: white;
+    }
+
+    body.dark .category-btn.active {
+        background: #138808;
+    }
+
+    body.dark .search-box input {
+        background: #111827;
+        color: white;
+        border-color: #334155;
+    }
+
+    body.dark .emergency {
+        background: #251414;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 600px) {
+
+        header h1 {
+            font-size: 29px;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+        }
+
+        .search-box {
+            flex-direction: column;
+        }
+
+        .search-box input {
+            border-radius: 10px;
+            margin-bottom: 8px;
+        }
+
+        .search-box button {
+            padding: 12px;
+            border-radius: 10px;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- =========================
+     HEADER
+========================== -->
+
+<header id="home">
+
+    <h1>🇮🇳 PUB USER WEBSITE</h1>
+
+    <p>
+        Your gateway to important Indian Government & Citizen Services
+    </p>
+
+    <button id="themeButton" onclick="toggleTheme()">
+        🌙 Night Mode
+    </button>
+
+</header>
+
+
+<!-- =========================
+     NAVIGATION
+========================== -->
+
+<nav>
+
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#updates">Updates</a>
+    <a href="#emergency">Emergency</a>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<section class="hero">
+
+    <h2>All Important Services in One Place</h2>
+
+    <p>
+        Find official government websites, documents, applications,
+        schemes and citizen services.
+    </p>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Aadhaar, Passport, PAN, Voter ID..."
+            onkeyup="searchServices()"
+        >
+
+        <button onclick="searchServices()">
+            🔍 Search
+        </button>
+
+    </div>
+
+
+    <!-- CATEGORY FILTER -->
+
+    <div class="categories">
+
+        <button class="category-btn active"
+            onclick="filterCategory('all', this)">
+            All
+        </button>
+
+        <button class="category-btn"
+            onclick="filterCategory('identity', this)">
+            🪪 Identity
+        </button>
+
+        <button class="category-btn"
+            onclick="filterCategory('transport', this)">
+            🚗 Transport
+        </button>
+
+        <button class="category-btn"
+            onclick="filterCategory('finance', this)">
+            💰 Finance
+        </button>
+
+        <button class="category-btn"
+            onclick="filterCategory('education', this)">
+            🎓 Education
+        </button>
+
+        <button class="category-btn"
+            onclick="filterCategory('health', this)">
+            🏥 Health
+        </button>
+
+        <button class="category-btn"
+            onclick="filterCategory('government', this)">
+            🇮🇳 Government
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================== -->
+
+<main id="services" class="services">
+
+    <h2>📌 Popular Government Services</h2>
+
+    <div class="service-grid" id="serviceGrid">
+
+
+        <!-- AADHAAR -->
+
+        <article class="service-card" data-category="identity">
+
+            <div class="service-icon">🪪</div>
+
+            <span class="official">
+                ✓ Official Government Website
+            </span>
+
+            <h3>Aadhaar - UIDAI</h3>
+
+            <p>
+                Aadhaar enrolment, updates, authentication and
+                related citizen services.
+            </p>
+
+            <a class="visit-btn"
+               href="https://uidai.gov.in/"
+               target="_blank">
+                Visit UIDAI →
+            </a>
+
+        </article>
+
+
+        <!-- PASSPORT -->
+
+        <article class="service-card" data-category="identity">
+
+            <div class="service-icon">🛂</div>
+
+            <span class="official">
+                ✓ Ministry of External Affairs
+            </span>
+
+            <h3>Passport Seva</h3>
+
+            <p>
+                Apply for a passport, reissue, Tatkaal,
+                appointments and application tracking.
+            </p>
+
+            <a class="visit-btn"
+               href="https://www.passportindia.gov.in/"
+               target="_blank">
+                Visit Passport Seva →
+            </a>
+
+        </article>
+
+
+        <!-- DIGILOCKER -->
+
+        <article class="service-card" data-category="identity">
+
+            <div class="service-icon">📁</div>
+
+            <span class="official">
+                ✓ Digital India
+            </span>
+
+            <h3>DigiLocker</h3>
+
+            <p>
+                Access and verify authentic digital documents
+                and certificates.
+            </p>
+
+            <a class="visit-btn"
+               href="https://www.digilocker.gov.in/"
+               target="_blank">
+                Open DigiLocker →
+            </a>
+
+        </article>
+
+
+        <!-- VOTER -->
+
+        <article class="service-card" data-category="government">
+
+            <div class="service-icon">🗳️</div>
+
+            <span class="official">
+                ✓ Election Commission of India
+            </span>
+
+            <h3>Voter Services</h3>
+
+            <p>
+                Register as a voter, update details, search
+                electoral roll and access e-EPIC services.
+            </p>
+
+            <a class="visit-btn"
+               href="https://voters.eci.gov.in/"
+               target="_blank">
+                Voter Services →
+            </a>
+
+        </article>
+
+
+        <!-- PAN -->
+
+        <article class="service-card" data-category="finance">
+
+            <div class="service-icon">💳</div>
+
+            <span class="official">
+                ✓ Income Tax Department
+            </span>
+
+            <h3>PAN Services</h3>
+
+            <p>
+                Access official PAN and income-tax related
+                services.
+            </p>
+
+            <a class="visit-btn"
+               href="https://www.incometax.gov.in/"
+               target="_blank">
+                Income Tax Portal →
+            </a>
+
+        </article>
+
+
+        <!-- INCOME TAX -->
+
+        <article class="service-card" data-category="finance">
+
+            <div class="service-icon">💰</div>
+
+            <span class="official">
+                ✓ Government of India
+            </span>
+
+            <h3>Income Tax</h3>
+
+            <p>
+                Income-tax return, e-filing, notices and
+                taxpayer services.
+            </p>
+
+            <a class="visit-btn"
+               href="https://www.incometax.gov.in/"
+               target="_blank">
+                Open Portal →
+            </a>
+
+        </article>
+
+
+        <!-- GST -->
+
+        <article class="service-card" data-category="finance">
+
+            <div class="service-icon">🧾</div>
+
+            <span class="official">
+                ✓ Government Portal
+            </span>
+
+            <h3>GST Portal</h3>
+
+            <p>
+                GST registration, returns, payments and
+                taxpayer services.
+            </p>
+
+            <a class="visit-btn"
+               href="https://www.gst.gov.in/"
+               target="_blank">
+                GST Portal →
+            </a>
+
+        </article>
+
+
+        <!-- EPFO -->
+
+        <article class="service-card" data-category="finance">
+
+            <div class="service-icon">🏦</div>
+
+            <span class="official">
+                ✓ Government of India
+            </span>
+
+            <h3>EPFO</h3>
+
+            <p>
+                Provident fund, pension and employee-related
+                services.
+            </p>
+
+            <a class="visit-btn"
+               href="https://www.epfindia.gov.in/"
+               target="_blank">
+                EPFO →
+            </a>
+
+        </article>
+
+
+        <!-- PARIVAHAN -->
+
+        <article class="service-card" data-category="transport">
+
+            <div class="service-icon">🚗</div>
+
+            <span class="official">
+                ✓ Ministry of Road Transport
+            </span>
+
+            <h3>Parivahan</h3>
+
+            <p>
+                Vehicle registration, driving licence and
+                transport-related services.
+            </p>
+
+            <a class="visit-btn"
+               href="https://parivahan.gov.in/"
+               target="_blank">
+                Parivahan →
+            </a>
+
+        </article>
+
+
+        <!-- DRIVING LICENCE -->
+
+        <article class="service-card" data-category="transport">
+
+            <div class="service-icon">🪪</div>
+
+            <span class="official">
+                ✓ Sarathi
+            </span>
+
+            <h3>Driving Licence</h3>
+
+            <p>
+                Apply and manage driving licence related
+                services.
+            </p>
+
+            <a class="visit-btn"
+               href="https://sarathi.parivahan.gov.in/"
+               target="_blank">
+                Sarathi →
+            </a>
+
+        </article>
+
+
+        <!-- VEHICLE -->
+
+        <article class="service-card" data-category="transport">
+
+            <div class="service-icon">🚘</div>
+
+            <span class="official">
+                ✓ VAHAN
+            </span>
+
+            <h3>Vehicle Services</h3>
+
+            <p>
+                Vehicle registration and related transport
+                services.
+            </p>
+
+            <a class="visit-btn"
+               href="https://vahan.parivahan.gov.in/"
+               target="_blank">
+                VAHAN →
+            </a>
+
+        </article>
+
+
+        <!-- EDUCATION -->
+
+        <article class="service-card" data-category="education">
+
+            <div class="service-icon">🎓</div>
+
+            <span class="official">
+                ✓ Government of India
+            </span>
+
+            <h3>Ministry of Education</h3>
+
+            <p>
+                Official education policies, announcements
+                and resources.
+            </p>
+
+            <a class="visit-btn"
+               href="https://www.education.gov.in/"
+               target="_blank">
+                Education Portal →
+            </a>
+
+        </article>
+
+
+        <!-- NTA -->
+
+        <article class="service-card" data-category="education">
+
+            <div class="service-icon">📝</div>
+
+            <span class="official">
+                ✓ National Testing Agency
+            </span>
+
+            <h3>NTA</h3>
+
+            <p>
+                Entrance examinations, notifications,
+                results and application information.
+            </p>
+
+            <a class="visit-btn"
+               href="https://www.nta.ac.in/"
+               target="_blank">
+                NTA →
+            </a>
+
+        </article>
+
+
+        <!-- SCHOLARSHIP -->
+
+        <article class="service-card" data-category="education">
+
+            <div class="service-icon">🏫</div>
+
+            <span class="official">
+                ✓ Government Portal
+            </span>
+
+            <h3>National Scholarship Portal</h3>
+
+            <p>
+                Government scholarship applications and
+                related services.
+            </p>
+
+            <a class="visit-btn"
+               href="https://scholarships.gov.in/"
+               target="_blank">
+                Scholarship Portal →
+            </a>
+
+        </article>
+
+
+        <!-- HEALTH -->
+
+        <article class="service-card" data-category="health">
+
+            <div class="service-icon">🏥</div>
+
+            <span class="official">
+                ✓ Government of India
+            </span>
+
+            <h3>Health Ministry</h3>
+
+            <p>
+                Official health policies, programmes and
+                public health information.
+            </p>
+
+            <a class="visit-btn"
+               href="https://www.mohfw.gov.in/"
+               target="_blank">
+                Health Ministry →
+            </a>
+
+        </article>
+
+
+        <!-- AYUSHMAN -->
+
+        <article class="service-card" data-category="health">
+
+            <div class="service-icon">❤️</div>
+
+            <span class="official">
+                ✓ National Health Authority
+            </span>
+
+            <h3>Ayushman Bharat</h3>
+
+            <p>
+                Information and services related to
+                PM-JAY and digital health initiatives.
+            </p>
+
+            <a class="visit-btn"
+               href="https://www.pmjay.gov.in/"
+               target="_blank">
+                PM-JAY →
+            </a>
+
+        </article>
+
+
+        <!-- MYSCHEME -->
+
+        <article class="service-card" data-category="government">
+
+            <div class="service-icon">🎁</div>
+
+            <span class="official">
+                ✓ Government Platform
+            </span>
+
+            <h3>myScheme</h3>
+
+            <p>
+                Discover government schemes based on
+                eligibility and category.
+            </p>
+
+            <a class="visit-btn"
+               href="https://www.myscheme.gov.in/"
+               target="_blank">
+                Find Schemes →
+            </a>
+
+        </article>
+
+
+        <!-- INDIA GOV -->
+
+        <article class="service-card" data-category="government">
+
+            <div class="service-icon">🇮🇳</div>
+
+            <span class="official">
+                ✓ National Portal
+            </span>
+
+            <h3>India.gov.in</h3>
+
+            <p>
+                Central gateway for Indian government
+                information and services.
+            </p>
+
+            <a class="visit-btn"
+               href="https://www.india.gov.in/"
+               target="_blank">
+                India.gov.in →
+            </a>
+
+        </article>
+
+
+        <!-- MYGOV -->
+
+        <article class="service-card" data-category="government">
+
+            <div class="service-icon">🤝</div>
+
+            <span class="official">
+                ✓ Government of India
+            </span>
+
+            <h3>MyGov</h3>
+
+            <p>
+                Citizen participation, campaigns,
+                discussions and government updates.
+            </p>
+
+            <a class="visit-btn"
+               href="https://www.mygov.in/"
+               target="_blank">
+                MyGov →
+            </a>
+
+        </article>
+
+
+        <!-- PIB -->
+
+        <article class="service-card" data-category="government">
+
+            <div class="service-icon">📰</div>
+
+            <span class="official">
+                ✓ Press Information Bureau
+            </span>
+
+            <h3>Government Updates</h3>
+
+            <p>
+                Official press releases, announcements
+                and government information.
+            </p>
+
+            <a class="visit-btn"
+               href="https://www.pib.gov.in/"
+               target="_blank">
+                PIB Updates →
+            </a>
+
+        </article>
+
+    </div>
+
+</main>
+
+
+<!-- =========================
+     LATEST UPDATES
+========================== -->
+
+<section id="updates" class="updates">
+
+    <h2>📰 Official Updates</h2>
+
+    <div class="update-box">
+        <a href="https://www.pib.gov.in/" target="_blank">
+            Latest Government Press Releases →
+        </a>
+        <p>
+            Check PIB for official Government of India
+            announcements and press releases.
+        </p>
+    </div>
+
+    <div class="update-box">
+        <a href="https://www.myscheme.gov.in/" target="_blank">
+            Find Government Schemes →
+        </a>
+        <p>
+            Search government schemes and check eligibility.
+        </p>
+    </div>
+
+    <div class="update-box">
+        <a href="https://www.eci.gov.in/" target="_blank">
+            Election Commission Updates →
+        </a>
+        <p>
+            Access official election and voter information.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EMERGENCY
+========================== -->
+
+<section id="emergency" class="emergency">
+
+    <h2>🚨 Emergency Numbers</h2>
+
+    <div class="emergency-grid">
+
+        <div class="emergency-card">
+            Emergency
+            <strong>112</strong>
+        </div>
+
+        <div class="emergency-card">
+            Police
+            <strong>100</strong>
+        </div>
+
+        <div class="emergency-card">
+            Fire
+            <strong>101</strong>
+        </div>
+
+        <div class="emergency-card">
+            Ambulance
+            <strong>108</strong>
+        </div>
+
+        <div class="emergency-card">
+            Women Helpline
+            <strong>181</strong>
+        </div>
+
+        <div class="emergency-card">
+            Child Helpline
+            <strong>1098</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <h3>🇮🇳 PUB USER WEBSITE</h3>
+
+    <p>
+        A citizen-focused collection of links to official
+        Indian government services.
+    </p>
+
+    <p>
+        Always verify important information on the official
+        government website before submitting personal details.
+    </p>
+
+    <p>
+        © 2026 PUB USER WEBSITE
+    </p>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<button id="topButton" onclick="topFunction()">
+    ↑
+</button>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+<script>
+
+    /* =========================
+       DAY / NIGHT MODE
+    ========================== */
+
+    function toggleTheme() {
+
+        document.body.classList.toggle("dark");
+
+        const button =
+            document.getElementById("themeButton");
+
+        if (document.body.classList.contains("dark")) {
+
+            button.innerHTML = "☀️ Day Mode";
+
+            localStorage.setItem("theme", "dark");
+
+        } else {
+
+            button.innerHTML = "🌙 Night Mode";
+
+            localStorage.setItem("theme", "light");
+
+        }
+    }
+
+
+    /* REMEMBER USER'S THEME */
+
+    window.onload = function () {
+
+        const savedTheme =
+            localStorage.getItem("theme");
+
+        if (savedTheme === "dark") {
+
+            document.body.classList.add("dark");
+
+            document.getElementById("themeButton")
+                .innerHTML = "☀️ Day Mode";
+        }
+    };
+
+
+    /* =========================
+       SEARCH SERVICES
+    ========================== */
+
+    function searchServices() {
+
+        const input =
+            document.getElementById("searchInput")
+                .value
+                .toLowerCase();
+
+        const cards =
+            document.querySelectorAll(".service-card");
+
+        cards.forEach(function(card) {
+
+            const text =
+                card.innerText.toLowerCase();
+
+            if (text.includes(input)) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+
+    /* =========================
+       CATEGORY FILTER
+    ========================== */
+
+    function filterCategory(category, button) {
+
+        const cards =
+            document.querySelectorAll(".service-card");
+
+        const buttons =
+            document.querySelectorAll(".category-btn");
+
+        buttons.forEach(function(btn) {
+
+            btn.classList.remove("active");
+
+        });
+
+        button.classList.add("active");
+
+
+        cards.forEach(function(card) {
+
+            if (
+                category === "all" ||
+                card.dataset.category === category
+            ) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+
+    /* =========================
+       BACK TO TOP BUTTON
+    ========================== */
+
+    window.onscroll = function () {
+
+        const button =
+            document.getElementById("topButton");
+
+        if (
+            document.documentElement.scrollTop > 400
+        ) {
+
+            button.style.display = "block";
+
+        } else {
+
+            button.style.display = "none";
+
+        }
+
+    };
+
+
+    function topFunction() {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+</script>
+```
+
+</body>
+
+</html>
